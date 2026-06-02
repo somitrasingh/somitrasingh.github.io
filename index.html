@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Somitra Singh Kushwah — Applied AI & Backend Engineer</title>
+<meta name="description" content="Portfolio of Somitra Singh Kushwah — Applied AI and backend engineer building agentic LLM systems." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">ssk<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#skills">skills</a>
+      <a href="#contact">contact</a>
+    </div>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Hello, I'm</p>
+    <h1>Somitra Singh<br/>Kushwah.</h1>
+    <p class="tagline">Applied AI &amp; backend engineer building agentic LLM systems that actually ship to real users.</p>
+    <div class="hero-meta">
+      <span><span class="dot"></span> Open to forward-deployed &amp; AI engineering roles</span>
+      <span>Arlington, TX</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#projects">See my work</a>
+      <a class="btn btn-ghost" href="mailto:somitrasinghkushwah@gmail.com">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container two-col">
+    <div>
+      <h2><span class="num">01.</span> About</h2>
+    </div>
+    <div class="prose">
+      <p>I'm a graduate student at <strong>UT Arlington</strong> finishing my M.S. in Computer Science, and an engineer who's spent the last couple of years building things people actually use.</p>
+      <p>Lately, most of my energy goes into <strong>agentic AI</strong> — LangGraph workflows, MCP tools, multi-agent orchestration, and the messy operational reality of running these systems on a VPS with real traffic. I'm interested in the part where models stop being demos and start being products: tool design, evaluation, prompt iteration, failure modes.</p>
+      <p>Before grad school I shipped backend and data systems at <strong>Red Hill Labs</strong> — Node, DynamoDB, MERN, AWS. That foundation is why I can take an LLM idea from notebook to a hardened endpoint with logs and restarts that survive a Tuesday morning.</p>
+      <p>I'm a tinkerer at heart. I self-host. I read papers. I rewrite my own tools instead of buying them. If something looks like magic, I want to take it apart.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="container">
+    <h2><span class="num">02.</span> Selected projects</h2>
+
+    <div class="project-grid">
+
+      <article class="project">
+        <div class="project-head">
+          <h3>OpenClaw &amp; Hermes Agent</h3>
+          <span class="date">May 2026</span>
+        </div>
+        <p class="role">Self-hosted agentic deployment · Linux VPS</p>
+        <p>Deployed production agent instances on a VPS, exposed through Telegram and Discord bots, and used them as daily drivers for code, research, and content workflows.</p>
+        <ul>
+          <li>Configured MCP server integrations, tool permissions, and sandboxed execution.</li>
+          <li>Built async webhook + long-poll bridge in Python with per-chat session state and rate limiting.</li>
+          <li>Hardened with systemd, log rotation, reverse proxy, and secrets management — codified real failure-mode fixes into restart-safe configs.</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>MCP</span><span>Telegram</span><span>Discord</span><span>systemd</span><span>Nginx</span>
+        </div>
+        <div class="project-links">
+          <span class="repo-private" title="Private repository">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Private repository
+          </span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>AI Hotel Booking Agent</h3>
+          <span class="date">Mar 2026</span>
+        </div>
+        <p class="role">LangGraph multi-node agent · GPT-4o</p>
+        <p>A conversational booking agent built on LangGraph's stateful graph with conditional edge routing — a hands-on take on the ReAct pattern.</p>
+        <ul>
+          <li>4 custom LangChain tools with Pydantic-validated schemas, backed by parameterized SQL against PostgreSQL (Neon).</li>
+          <li>Persistent conversation memory via LangGraph's PostgresSaver, plus per-user long-term memory for preferences.</li>
+          <li>Streamlit chat UI with Google OAuth 2.0 (PKCE) and user-scoped data isolation.</li>
+        </ul>
+        <div class="tags">
+          <span>LangGraph</span><span>LangChain</span><span>GPT-4o</span><span>PostgreSQL</span><span>Streamlit</span><span>OAuth</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/somitrasingh/ai-hotel-booking-agent" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.97 10.97 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.69.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56C20.21 21.38 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Mobile Price Prediction</h3>
+          <span class="date">Nov 2025</span>
+        </div>
+        <p class="role">End-to-end ML pipeline · AWS SageMaker</p>
+        <p>A classification model predicting phone price ranges, with the full train/deploy/invoke loop running on SageMaker — S3 for data, IAM for least-privilege access.</p>
+        <ul>
+          <li>Custom training script + SageMaker estimator for cloud training and evaluation.</li>
+          <li>Scalable prediction endpoint with a clean upload → train → deploy → invoke workflow.</li>
+        </ul>
+        <div class="tags">
+          <span>SageMaker</span><span>Scikit-Learn</span><span>S3</span><span>IAM</span><span>Python</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/somitrasingh/mobile-price-prediction-sagemaker" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.97 10.97 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.69.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56C20.21 21.38 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Network Security &amp; Phishing Detection</h3>
+          <span class="date">Nov 2025</span>
+        </div>
+        <p class="role">Flask web app · Dockerized · GitLab CI/CD</p>
+        <p>A Python network-security tool that ingests real-world datasets to detect phishing and flag suspicious patterns, wrapped in a Flask UI for analyst review.</p>
+        <ul>
+          <li>Backend ingestion + validation scripts to flag anomalies for follow-up.</li>
+          <li>Containerized with Docker and shipped via GitLab CI/CD to reduce release friction.</li>
+        </ul>
+        <div class="tags">
+          <span>Flask</span><span>Docker</span><span>GitLab CI</span><span>Python</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/somitrasingh/network-security-phishing-detection" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.97 10.97 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.69.41.35.78 1.05.78 2.12v3.14c0 .31.21.67.8.56C20.21 21.38 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container two-col">
+    <div>
+      <h2><span class="num">03.</span> Experience</h2>
+    </div>
+    <div class="prose">
+
+      <div class="exp">
+        <div class="exp-head">
+          <h3>Software Engineer — Data &amp; Backend Systems</h3>
+          <span class="date">Jan 2023 – Jul 2024</span>
+        </div>
+        <p class="role">Red Hill Labs · Intern → Full-Time</p>
+        <ul>
+          <li>Designed a centralized inventory + sales platform on Node.js and DynamoDB enabling real-time analytics over large-scale transactional data.</li>
+          <li>Built ingestion and reporting pipelines that improved data accuracy ~15% and cut report generation from hours to seconds.</li>
+          <li>Shipped MERN apps integrated with Elastic Beanstalk, DynamoDB, and S3 — owned production rollout and post-deploy hardening.</li>
+          <li>Wrote backend APIs with strict validation and idempotency, reducing data inconsistencies by ~30%.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="exp-head">
+          <h3>M.S. Computer Science</h3>
+          <span class="date">Aug 2024 – May 2026</span>
+        </div>
+        <p class="role">University of Texas at Arlington</p>
+      </div>
+
+      <div class="exp">
+        <div class="exp-head">
+          <h3>B.Tech Computer Science</h3>
+          <span class="date">2019 – 2023</span>
+        </div>
+        <p class="role">Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2><span class="num">04.</span> Toolbox</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>LLM &amp; Agentic AI</h4>
+        <p>LangChain, LangGraph, MCP, OpenAI &amp; Anthropic APIs, tool/function calling, RAG, multi-agent orchestration, ReAct, Pydantic structured outputs, eval &amp; observability.</p>
+      </div>
+      <div class="skill-card">
+        <h4>Languages</h4>
+        <p>Python, JavaScript, TypeScript, Java, C++, C, SQL.</p>
+      </div>
+      <div class="skill-card">
+        <h4>Backend &amp; APIs</h4>
+        <p>FastAPI, Flask, Node.js, Express, REST, OAuth 2.0, PostgreSQL, SQLite, DynamoDB, MongoDB.</p>
+      </div>
+      <div class="skill-card">
+        <h4>Cloud &amp; Infra</h4>
+        <p>AWS (EC2, S3, DynamoDB, Beanstalk, SageMaker, Bedrock), GCP basics, Oracle Cloud, Linux VPS, Nginx, systemd.</p>
+      </div>
+      <div class="skill-card">
+        <h4>ML &amp; MLOps</h4>
+        <p>Scikit-Learn, PyTorch, HuggingFace Transformers, SageMaker, model deployment, MLOps pipelines.</p>
+      </div>
+      <div class="skill-card">
+        <h4>DevOps &amp; Tools</h4>
+        <p>Docker, GitHub Actions, GitLab CI/CD, Git, Claude Code, Cursor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section section-contact">
+  <div class="container narrow">
+    <h2><span class="num">05.</span> Let's talk</h2>
+    <p class="lede">I'm actively looking for forward-deployed and applied-AI engineering roles. If you're building something interesting at the messy intersection of LLMs and real-world systems — I'd love to hear about it.</p>
+    <div class="contact-links">
+      <a href="mailto:somitrasinghkushwah@gmail.com">somitrasinghkushwah@gmail.com</a>
+      <a href="tel:+16823442942">+1 (682) 344-2942</a>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/somitrasingh" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/somitra-singh-kushwah" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>Built by hand with HTML &amp; CSS. <span class="muted">© 2026 Somitra Singh Kushwah</span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
