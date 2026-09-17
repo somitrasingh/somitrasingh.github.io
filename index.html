@@ -36,7 +36,7 @@
     <h1>Somitra Singh<br/>Kushwah.</h1>
     <p class="tagline">Applied AI &amp; backend engineer building agentic LLM systems that actually ship to real users.</p>
     <div class="hero-meta">
-      <span><span class="dot"></span> M.S. CS, UT Arlington (May 2026) · Open to full-time roles</span>
+      <span><span class="dot"></span> AI ML Engineer @ Citigroup · M.S. CS, UT Arlington '26</span>
       <span>Arlington, TX</span>
     </div>
     <div class="cta-row">
@@ -52,9 +52,10 @@
       <h2><span class="num">01.</span> About</h2>
     </div>
     <div class="prose">
-      <p>I just graduated from <strong>UT Arlington</strong> with an M.S. in Computer Science (May 2026), and I'm an engineer who's spent the last couple of years building things people actually use.</p>
+      <p>I just graduated from <strong>UT Arlington</strong> with an M.S. in Computer Science (May 2026), and I'm an AI/ML engineer who's spent the last few years building things people actually use.</p>
+      <p>Right now I'm an <strong>AI ML Engineer at Citigroup</strong>, where I work on the unglamorous, high-stakes side of ML in finance — RAG over credit and compliance documents, anomaly detection for transaction monitoring, forecasting, A/B tests on fraud thresholds, and the CI/CD, drift monitoring, and governance artifacts that make any of it auditable.</p>
       <p>Lately, most of my energy goes into <strong>agentic AI</strong> — LangGraph workflows, MCP tools, multi-agent orchestration, and the messy operational reality of running these systems on a VPS with real traffic. I'm interested in the part where models stop being demos and start being products: tool design, evaluation, prompt iteration, failure modes.</p>
-      <p>Before grad school I shipped backend and data systems at <strong>Red Hill Labs</strong> — Node, DynamoDB, MERN, AWS. That foundation is why I can take an LLM idea from notebook to a hardened endpoint with logs and restarts that survive a Tuesday morning.</p>
+      <p>Before grad school I was an <strong>ML Engineer at Hexaware Technologies</strong>, building feature pipelines and NLP extraction over millions of clinical records, containerizing inference services with Docker and Jenkins, and formalizing fairness checks for Responsible AI audits. That foundation is why I can take an LLM idea from notebook to a hardened endpoint with logs and restarts that survive a Tuesday morning.</p>
       <p>I'm a tinkerer at heart. I self-host. I read papers. I rewrite my own tools instead of buying them. If something looks like magic, I want to take it apart.</p>
     </div>
   </div>
@@ -65,6 +66,30 @@
     <h2><span class="num">02.</span> Selected projects</h2>
 
     <div class="project-grid">
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Agentic Multi-User RAG Platform</h3>
+          <span class="date">Aug 2026</span>
+        </div>
+        <p class="role">Full-stack agentic RAG · FastAPI + React + PostgreSQL</p>
+        <p>A multi-user RAG platform built around a LangGraph tool-calling agent that autonomously decides between document retrieval, live Gmail actions, and memory recall per query — genuine agentic reasoning instead of static retrieve-then-generate.</p>
+        <ul>
+          <li>Hybrid dense + sparse retrieval: pgvector HNSW + BM25 (ParadeDB), fused via Reciprocal Rank Fusion — all from a single Postgres instance.</li>
+          <li>Persistent long-term memory built from scratch: LLM-driven write tool, two-layer semantic deduplication, automatic cross-session recall per user.</li>
+          <li>Content-aware ingestion for PDFs, images, and 10+ formats (Docling, Unstructured) with LLM metadata enrichment and table-preserving chunking.</li>
+          <li>Multi-user security: Supabase auth, per-thread authorization, Fernet-encrypted per-user OAuth credentials for Gmail — concurrency-safe under simultaneous load.</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>FastAPI</span><span>LangGraph</span><span>pgvector</span><span>ParadeDB</span><span>React</span><span>Supabase</span>
+        </div>
+        <div class="project-links">
+          <span class="repo-private" title="Private repository">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Private repository
+          </span>
+        </div>
+      </article>
 
       <article class="project">
         <div class="project-head">
@@ -114,6 +139,29 @@
 
       <article class="project">
         <div class="project-head">
+          <h3>Autonomous AI/ML Job-Fetching Agent</h3>
+          <span class="date">Mar 2026</span>
+        </div>
+        <p class="role">Config-driven daily agent · GitHub Actions</p>
+        <p>A fully automated agent that runs daily on GitHub Actions to fetch AI/ML job listings, filter by recency, deduplicate, and persist results — with LLM scoring on top.</p>
+        <ul>
+          <li>Pluggable provider abstraction (Adzuna, JSearch/RapidAPI) normalizing heterogeneous API responses into a unified schema.</li>
+          <li>OpenAI JSON-mode scoring of each posting's relevance 0–100 with rationale, plus tailored resume generation with guardrails against fabricating experience.</li>
+          <li>CI pipeline with fail-fast secret validation, artifact upload, conditional auto-commit, concurrency control, and pip caching.</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>OpenAI</span><span>GitHub Actions</span><span>Adzuna</span><span>JSearch</span>
+        </div>
+        <div class="project-links">
+          <span class="repo-private" title="Private repository">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Private repository
+          </span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
           <h3>Mobile Price Prediction</h3>
           <span class="date">Nov 2025</span>
         </div>
@@ -136,17 +184,18 @@
 
       <article class="project">
         <div class="project-head">
-          <h3>Network Security &amp; Phishing Detection</h3>
-          <span class="date">Nov 2025</span>
+          <h3>Phishing Detection MLOps Pipeline</h3>
+          <span class="date">Oct – Dec 2025</span>
         </div>
-        <p class="role">Flask web app · Dockerized · GitLab CI/CD</p>
-        <p>A Python network-security tool that ingests real-world datasets to detect phishing and flag suspicious patterns, wrapped in a Flask UI for analyst review.</p>
+        <p class="role">End-to-end MLOps · Terraform-provisioned AWS</p>
+        <p>A phishing-URL detection pipeline covering ingestion, schema validation, KNN imputation, training, and serving — every stage modular and independently testable.</p>
         <ul>
-          <li>Backend ingestion + validation scripts to flag anomalies for follow-up.</li>
-          <li>Containerized with Docker and shipped via GitLab CI/CD to reduce release friction.</li>
+          <li>Compared six classifiers with hyperparameter search; auto-selected the best model (F1 0.976, precision 0.962, recall 0.99) with MLflow + DagsHub tracking.</li>
+          <li>FastAPI inference service (/train, /predict) containerized with Docker; GitHub Actions CI/CD builds, pushes to ECR, and rolls the ECS service on every push to main.</li>
+          <li>Entire AWS stack as code with Terraform — ECS Fargate, ECR with scan-on-push, encrypted S3 artifacts, CloudWatch, and least-privilege IAM roles.</li>
         </ul>
         <div class="tags">
-          <span>Flask</span><span>Docker</span><span>GitLab CI</span><span>Python</span>
+          <span>Scikit-Learn</span><span>MLflow</span><span>FastAPI</span><span>Docker</span><span>Terraform</span><span>ECS Fargate</span><span>GitHub Actions</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/somitrasingh/Network-Security" target="_blank" rel="noopener">
@@ -169,15 +218,29 @@
 
       <div class="exp">
         <div class="exp-head">
-          <h3>Software Engineer — Data &amp; Backend Systems</h3>
-          <span class="date">Jan 2023 – Jul 2024</span>
+          <h3>AI ML Engineer</h3>
+          <span class="date">Jan 2026 – Present</span>
         </div>
-        <p class="role">Red Hill Labs · Intern → Full-Time</p>
+        <p class="role">Citigroup · Texas</p>
         <ul>
-          <li>Designed a centralized inventory + sales platform on Node.js and DynamoDB enabling real-time analytics over large-scale transactional data.</li>
-          <li>Built ingestion and reporting pipelines that improved data accuracy ~15% and cut report generation from hours to seconds.</li>
-          <li>Shipped MERN apps integrated with Elastic Beanstalk, DynamoDB, and S3 — owned production rollout and post-deploy hardening.</li>
-          <li>Wrote backend APIs with strict validation and idempotency, reducing data inconsistencies by ~30%.</li>
+          <li>Built and deployed a Python RAG pipeline over 5,000+ internal credit and compliance documents, cutting analyst lookup time by 30%.</li>
+          <li>Tuned a scikit-learn anomaly detection model for transaction monitoring, reducing manual fraud-review volume by 18% within compliance thresholds.</li>
+          <li>Implemented CI/CD, model versioning, and drift monitoring with documented governance artifacts for audit readiness across two use cases.</li>
+          <li>Time-series forecasting of delinquency and risk exposure (+15% accuracy), A/B-tested fraud thresholds, and k-means transaction segmentation that improved review prioritization by 20%.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="exp-head">
+          <h3>ML Engineer</h3>
+          <span class="date">Jan 2022 – Aug 2024</span>
+        </div>
+        <p class="role">Hexaware Technologies · India</p>
+        <ul>
+          <li>Designed feature engineering pipelines across 5M+ clinical records, boosting readmission prediction AUC by 20% over baseline.</li>
+          <li>Trained gradient-boosted classifiers and fine-tuned TensorFlow models for clinical text; containerized inference with Docker and Jenkins, cutting review time by 40%.</li>
+          <li>Built NLP extraction pipelines with spaCy and Hugging Face Transformers across 500K+ clinical notes for clinical trial analytics.</li>
+          <li>Validated demographic parity via chi-square and t-tests across 6+ patient cohorts, formalizing fairness checks used in Responsible AI audits.</li>
         </ul>
       </div>
 
@@ -207,7 +270,7 @@
     <div class="skills-grid">
       <div class="skill-card">
         <h4>LLM &amp; Agentic AI</h4>
-        <p>LangChain, LangGraph, MCP, OpenAI &amp; Anthropic APIs, tool/function calling, RAG, multi-agent orchestration, ReAct, Pydantic structured outputs, eval &amp; observability.</p>
+        <p>LangChain, LangGraph, MCP, OpenAI &amp; Anthropic APIs, RAG, hybrid dense + sparse search (RRF, BM25), long-term memory systems, multi-agent orchestration, ReAct, tool calling, Pydantic structured outputs, Chroma, pgvector.</p>
       </div>
       <div class="skill-card">
         <h4>Languages</h4>
@@ -215,19 +278,19 @@
       </div>
       <div class="skill-card">
         <h4>Backend &amp; APIs</h4>
-        <p>FastAPI, Flask, Node.js, Express, REST, OAuth 2.0, PostgreSQL, SQLite, DynamoDB, MongoDB.</p>
+        <p>FastAPI, Flask, Node.js, Express, React, REST, webhooks, OAuth 2.0, PostgreSQL (pgvector, ParadeDB), MySQL, MongoDB, DynamoDB.</p>
       </div>
       <div class="skill-card">
         <h4>Cloud &amp; Infra</h4>
-        <p>AWS (EC2, S3, DynamoDB, Beanstalk, SageMaker, Bedrock), GCP basics, Oracle Cloud, Linux VPS, Nginx, systemd.</p>
+        <p>AWS (EC2, S3, SageMaker, Bedrock, ECS Fargate, ECR, IAM, CloudWatch, DynamoDB, Beanstalk), Terraform, Supabase, Render, Linux VPS, Nginx, systemd.</p>
       </div>
       <div class="skill-card">
         <h4>ML &amp; MLOps</h4>
-        <p>Scikit-Learn, PyTorch, HuggingFace Transformers, SageMaker, model deployment, MLOps pipelines.</p>
+        <p>Scikit-Learn, TensorFlow, PyTorch, Hugging Face Transformers, XGBoost, spaCy, MLflow, DagsHub, DVC, Airflow, model registry, experiment tracking, drift monitoring.</p>
       </div>
       <div class="skill-card">
-        <h4>DevOps &amp; Tools</h4>
-        <p>Docker, GitHub Actions, GitLab CI/CD, Git, Claude Code, Cursor.</p>
+        <h4>DevOps &amp; Governance</h4>
+        <p>Docker, GitHub Actions, GitLab CI/CD, Jenkins, Git, pytest, Claude Code, Cursor, responsible AI, model risk management, bias/fairness testing.</p>
       </div>
     </div>
   </div>
